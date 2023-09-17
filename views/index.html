@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Timestamp Microservice | freeCodeCamp.org</title>
+    <link
+      rel="shortcut icon"
+      href="https://cdn.freecodecamp.org/universal/favicons/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+
+    <style>
+      .footer-2 {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: #b3aeae;
+        padding: 10px;
+        text-align: center;
+      }
+
+      .footer-2 p {
+        margin: 0;
+        font-size: 14px;
+        color: #242323;
+      }
+
+      @media screen and (max-width: 600px) {
+        h1 {
+          font-size: 24px;
+        }
+        .footer-2 p {
+          font-size: 12px !important;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Timestamp Microservice</h1>
+    <hr />
+    <div class="container">
+      <h3>Example Usage:</h3>
+      <ul>
+        <li><a href="api/2015-12-25">[project url]/api/2015-12-25</a></li>
+        <li><a href="api/1451001600000">[project url]/api/1451001600000</a></li>
+      </ul>
+
+      <h3>Example Output:</h3>
+      <p>
+        <code
+          >{"unix":1451001600000, "utc":"Fri, 25 Dec 2015 00:00:00 GMT"}</code
+        >
+      </p>
+    </div>
+    <div class="footer">
+      <p>By <a href="https://www.freecodecamp.org/">freeCodeCamp.org</a></p>
+    </div>
+    <footer class="footer-2">
+      <p class="copyright">
+        &copy; 2023 Abdelrahman Mohammed. All rights reserved.
+      </p>
+    </footer>
+  </body>
+</html>
