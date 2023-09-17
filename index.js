@@ -17,18 +17,17 @@ app.use(express.static("public"));
 app.get("/", function (req, res) {
   res.sendFile(__dirname + "/views/index.html");
 });
+app.get("/api/", function (req, res) {
+  // If 'id' is empty or not provided, assume the current time
+  const currentUnixTime = Date.now();
+  const currentUtcTime = new Date(currentUnixTime).toUTCString();
 
+  return res.json({ unix: currentUnixTime, utc: currentUtcTime });
+});
 // your first API endpoint...
 app.get("/api/:id", function (req, res) {
   const id = req.params.id;
 
-  // If 'id' is empty or not provided, assume the current time
-  if (!id) {
-    const currentUnixTime = Date.now();
-    const currentUtcTime = new Date(currentUnixTime).toUTCString();
-
-    return res.json({ unix: currentUnixTime, utc: currentUtcTime });
-  }
   let date;
   // Check if 'id' is a Unix timestamp (a number)
   if (!isNaN(id)) {
